@@ -19,3 +19,14 @@ model User {
 
   @@map("users")
 }
+
+model Products {
+  id         Int      @id @default(autoincrement())
+  name       String?
+  quantity   String?
+  size       String?
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@map("products")
+}
